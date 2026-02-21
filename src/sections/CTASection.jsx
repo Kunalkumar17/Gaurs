@@ -1,7 +1,10 @@
 import React from 'react'
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { Download,Phone } from 'lucide-react';
 
 const CTASection = () => {
+    const phoneNumber = "918745805409";
+    const whatsappMessage = "Hi, I Need the Brochure";
     const [ref, isVisible] = useScrollAnimation();
 
     return (
@@ -24,13 +27,24 @@ const CTASection = () => {
               Schedule a site visit and discover your dream home at Gaur Butterfly
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="group relative px-12 py-5 bg-amber-600 text-white rounded-full font-montserrat font-bold text-sm tracking-widest overflow-hidden transition-all hover:shadow-2xl hover:shadow-amber-900/50">
-                <span className="relative z-10">DOWNLOAD BROCHURE</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </button>
-              <button className="px-12 py-5 border-2 border-white text-white rounded-full font-montserrat font-bold text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all">
-                CALL NOW
-              </button>
+              <a
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            whatsappMessage
+          )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+              className="rounded-full border-2 border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center h-14"
+            >
+              <Download size={16} />
+              Brochure
+            </a>
+              <a
+          href={`tel:+${phoneNumber}`}
+          className="w-full rounded-full h-1/2 flex items-center border-2 justify-center gap-2 py-4 bg-gray-900 text-white font-semibold tracking-wide"
+        >
+          <Phone size={18} />
+          Call Now
+        </a>
             </div>
           </div>
         </div>

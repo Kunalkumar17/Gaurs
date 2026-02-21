@@ -2,8 +2,8 @@ import React from "react";
 import { Phone, MessageCircle } from "lucide-react";
 
 const MobileContactBar = () => {
-  const phoneNumber = "919999999999"; // change to your number (with country code, no +)
-  const whatsappMessage = "Hi, I'm interested in your project. Please share details.";
+  const phoneNumber = "918745805409"; 
+  const whatsappMessage = "Hi, I'm interested. Please share details.";
 
   return (
     <div className="fixed bottom-0 left-0 w-full z-50 md:hidden">

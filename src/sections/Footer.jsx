@@ -12,18 +12,18 @@ const Footer = () => {
             <div>
               <h4 className="font-montserrat font-semibold mb-4 text-lg">Quick Links</h4>
               <ul className="space-y-3 text-gray-400">
-                <li><a href="#" className="hover:text-amber-500 transition-colors font-montserrat">About</a></li>
-                <li><a href="#" className="hover:text-amber-500 transition-colors font-montserrat">Floor Plans</a></li>
-                <li><a href="#" className="hover:text-amber-500 transition-colors font-montserrat">Amenities</a></li>
-                <li><a href="#" className="hover:text-amber-500 transition-colors font-montserrat">Location</a></li>
+                <li><a href="#aboutus" className="hover:text-amber-500 transition-colors font-montserrat">About</a></li>
+                <li><a href="#specifications" className="hover:text-amber-500 transition-colors font-montserrat">Floor Plans</a></li>
+                <li><a href="#floor-plans" className="hover:text-amber-500 transition-colors font-montserrat">Amenities</a></li>
+                <li><a href="#location" className="hover:text-amber-500 transition-colors font-montserrat">Location</a></li>
               </ul>
             </div>
-            <div>
+            <div> 
               <h4 className="font-montserrat font-semibold mb-4 text-lg">Contact</h4>
               <ul className="space-y-3 text-gray-400">
                 <li className="font-montserrat">Yamuna Expressway</li>
                 <li className="font-montserrat">Greater Noida, UP</li>
-                <li className="text-amber-500 font-montserrat font-semibold">+91 XXXXX XXXXX</li>
+                <li className="text-amber-500 font-montserrat font-semibold">+91 8745805409</li>
               </ul>
             </div>
           </div>

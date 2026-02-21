@@ -23,6 +23,7 @@ const AmenitiesSection = () => {
 
   return (
     <section
+    id='specifications'
       ref={containerRef}
       className="relative h-[300vh] bg-[#e7e5df]"
     >

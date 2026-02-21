@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Download } from "lucide-react";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const phoneNumber = "918745805409";
+  const whatsappMessage = "Hi, I Need the Brochure";
 
   const heroImages = [
     {
@@ -71,15 +74,19 @@ const HeroSection = () => {
   <div className="bg-white px-6 py-8 flex flex-col gap-4 md:hidden">
 
     <a
-      href="/Brochure.pdf"
-      download
-      className="w-full text-center py-4 bg-amber-600 text-white text-sm tracking-widest uppercase"
-    >
-      Download Brochure
-    </a>
+     href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                whatsappMessage
+              )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                  className="border h-12 border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <Download size={16} />
+                  Brochure
+      </a>
 
     <button className="w-full py-4 border border-gray-400 text-gray-800 text-sm tracking-widest uppercase">
-      Schedule Visit
+      Contact Us
     </button>
 
   </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X , Download} from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const phoneNumber = "918745805409";
+  const whatsappMessage = "Hi, I Need the Brochure";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -56,17 +58,21 @@ const Navigation = () => {
               >
                 {link.name}
 
-                {/* Elegant Underline Animation */}
                 <span className="absolute left-0 -bottom-2 w-0 h-[1px] bg-amber-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
 
             {/* Premium CTA */}
             <a
-              href="#enquire"
-              className="ml-6 border border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300"
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            whatsappMessage
+          )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+              className="ml-6 border border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
-              Enquire Now
+              <Download size={16} />
+              Brochure
             </a>
           </div>
 
@@ -109,7 +115,7 @@ const Navigation = () => {
           ))}
 
           <a
-            href="#enquire"
+            href={`tel:+${phoneNumber}`}
             onClick={() => setIsMobileMenuOpen(false)}
             className="block mt-4 border border-amber-500 text-amber-500 px-6 py-3 text-center uppercase tracking-widest hover:bg-amber-500 hover:text-white transition-all"
           >

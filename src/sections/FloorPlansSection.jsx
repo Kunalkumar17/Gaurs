@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import Form  from '../components/Form.jsx'
 
 const FloorPlansSection = () => {
     const [ref, isVisible] = useScrollAnimation();
+    const [showForm, setShowForm] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState('3bhk');
     const [preview, setPreview] = useState({
       visible: false,
@@ -48,6 +50,8 @@ const FloorPlansSection = () => {
 
     return (
       <section ref={ref} id='floor-plans' className="pt-20 bg-[#f4f2ee]">
+
+        {showForm && <Form onClose={() => setShowForm(false)} />}
   <div className="max-w-7xl mx-auto px-8">
 
     {/* Heading */}
@@ -92,7 +96,7 @@ const FloorPlansSection = () => {
 
   {/* Base Image */}
   <div
-    className="relative w-full aspect-[4/3] overflow-hidden rounded-[12px] bg-white shadow-sm"
+    className="relative w-full aspect-[4/3] overflow-hidden rounded-[12px] bg-white shadow-sm blur-100"
     onMouseMove={(e) => {
       const rect = e.currentTarget.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -112,28 +116,15 @@ const FloorPlansSection = () => {
     }
   >
     <img
-      src={floorPlans[selectedPlan].image}
-      alt=""
-      className="w-full h-full object-contain"
-    />
+  src={floorPlans[selectedPlan].image}
+  alt=""
+  onClick={() => setShowForm(true)}
+  onContextMenu={(e) => e.preventDefault()}
+  onDragStart={(e) => e.preventDefault()}
+  draggable={false}
+  className="w-full h-full object-contain cursor-pointer blur-md"
+/>
   </div>
-
-  {/* Floating Large Preview */}
-  {preview.visible && (
-    <div className="absolute top-0 left-[105%] z-50">
-      <div className="w-[500px] h-[500px] bg-white rounded-[18px] shadow-2xl overflow-hidden p-4">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url(${floorPlans[selectedPlan].image})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "300%",
-            backgroundPosition: `${preview.bgX}% ${preview.bgY}%`,
-          }}
-        />
-      </div>
-    </div>
-  )}
 
 </div>
 
@@ -178,8 +169,8 @@ const FloorPlansSection = () => {
 
           {/* Download Button */}
           <div className="mt-14">
-            <button className="px-8 py-4 border border-black text-sm tracking-widest font-[Inter] uppercase hover:bg-black hover:text-white transition-all duration-300">
-              Download Floor Plan
+            <button onClick={() => setShowForm(true)} className="px-8 py-4 border border-black text-sm tracking-widest font-[Inter] uppercase hover:bg-black hover:text-white transition-all duration-300">
+              Request Floor Plan
             </button>
           </div>
         </div>
