@@ -79,15 +79,15 @@ const HeroSection = () => {
               )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                  className="border h-12 border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                  className="border h-12 rounded-full border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Download size={16} />
                   Brochure
       </a>
 
-    <button className="w-full py-4 border border-gray-400 text-gray-800 text-sm tracking-widest uppercase">
-      Contact Us
-    </button>
+    <a href={'aboutus'} className="w-full h-14 py-4 border rounded-full border-gray-400 text-gray-800 text-sm tracking-widest uppercase flex justify-center">
+      About Us
+    </a>
 
   </div>
 
