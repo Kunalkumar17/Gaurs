@@ -15,6 +15,7 @@ import {
   MobileContactBar,
   ArchitectSection,
 } from "./sections";
+import LeadForm from "./sections/LeadForm";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -31,6 +32,10 @@ const App = () => {
 
       <section>
         <HeroSection />
+      </section>
+
+      <section>
+        <LeadForm />
       </section>
 {/* 
       <section>

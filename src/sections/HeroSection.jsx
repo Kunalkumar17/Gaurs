@@ -71,7 +71,7 @@ const HeroSection = () => {
   </div>
 
   {/* ================= WHITE BUTTON AREA ================= */}
-  <div className="bg-white px-6 py-8 flex flex-col gap-4 md:hidden">
+  {/* <div className="bg-white px-6 py-8 flex flex-col gap-4 md:hidden">
 
     <a
      href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -89,7 +89,7 @@ const HeroSection = () => {
       About Us
     </a>
 
-  </div>
+  </div> */}
 
 </section>
   );
