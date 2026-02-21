@@ -77,7 +77,19 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          
+          <div className="md:hidden flex items-center">
+            <a
+     href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                whatsappMessage
+              )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                  className="border h-8 md:h-12 rounded-full border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 "
+                >
+                  <Download size={16} />
+                  Brochure
+      </a>  
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 ${
@@ -115,12 +127,16 @@ const Navigation = () => {
           ))}
 
           <a
-            href={`tel:+${phoneNumber}`}
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block mt-4 border border-amber-500 text-amber-500 px-6 py-3 text-center uppercase tracking-widest hover:bg-amber-500 hover:text-white transition-all"
-          >
-            Enquire Now
-          </a>
+     href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                whatsappMessage
+              )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                  className="border h-12 rounded-full border-amber-500 text-amber-500 px-6 py-2 uppercase text-sm tracking-widest hover:bg-amber-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <Download size={16} />
+                  Brochure
+      </a>
         </div>
       </div>
     </nav>
