@@ -32,8 +32,8 @@ const LeadForm = () => {
   };
 
   return (
-    <div className="bg-white py-2 px-4 border-b">
-      <div className="max-w-5xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-sm">
+    <div className="bg-white py-2 px-4 border-b w-full">
+      <div className="w-full mx-auto bg-gray-50 p-8 rounded-2xl shadow-sm">
         
         <h2 className="text-2xl font-semibold text-center mb-2">
           Get More Details
